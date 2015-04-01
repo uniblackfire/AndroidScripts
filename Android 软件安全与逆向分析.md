@@ -176,12 +176,22 @@
 
 ***
 ### 静态分析
-- 查看类名和启动Activity
+- 查看类名
 
-```bash
-aapt dump badging apkfilename | grep package | awk '{print $2}' | sed s/name=//g | sed s/\\'//g
-aapt dump badging apkfilename | grep launchable-activity | awk '{print $2}' | sed s/name=//g | sed s/\\'//g
-```
+> aapt dump badging `apkfilename` | grep package | awk '{print $2}' | sed s/name=//g | sed s/\\'//g
+
+- 查看启动Activity
+
+> aapt dump badging `apkfilename` | grep launchable-activity | awk '{print $2}' | sed s/name=//g | sed s/\\'//g
+
+- 获取PID
+
+> adb shell "ps | grep `packagename` | awk '{ print $2 }'
+
+- 获取Tracer PID
+
+> cat /proc/`pid`/status | grep TracerPid | awk '{ print $2 }'
+
 
 ***
 ### 动态调试
@@ -226,13 +236,3 @@ adb forward tcp:23946 tcp:23946
 	```
 	
 - 监控LogTag为ActivityManage的Log能了解当前弹出的Activity的名称
-
-### 常见命令
-
-- 获取PID
-
-> adb shell "ps | grep `packagename` | awk '{ print $2 }'
-
-- 获取Tracer PID
-
-> cat /proc/`pid`/status | grep TracerPid | awk '{ print $2 }'

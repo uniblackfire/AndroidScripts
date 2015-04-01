@@ -211,10 +211,9 @@
     adb forward tcp:23946 tcp:23946
     ```
 
-  9. 启动app
-    >调试模式启动app
+  9. 调试模式启动app
 
-    >```bash
+    ```bash
   adb shell am start -D -n com.ali.encryption/com.ali.encryption.MainActivity
                    （前面是包名，后面是类名）
     ```

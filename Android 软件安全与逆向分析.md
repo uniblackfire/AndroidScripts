@@ -219,6 +219,7 @@
                    （前面是包名，后面是类名）
   ```
 
+
   10. 启动IDA，选择debugger->attach->remote armlinux/android debugger，hostname写localhost，port写23946，并且设置Debug option
   11. IDA选择进程
   12. 在IDA中按G跳转到要调试的函数，F2下断点

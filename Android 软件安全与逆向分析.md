@@ -192,9 +192,22 @@
 
 > cat /proc/`pid`/status | grep TracerPid | awk '{ print $2 }'
 
+#### API特征
+
+- 密码键盘
+
+> android/widget/Button;->getText()Ljava/lang/CharSequence;
+
+- Log 特征
+
+> Landroid/util/Log;->
+
+
 
 ***
 ### 动态调试
+
+- 监控LogTag为ActivityManage的Log能了解当前弹出的Activity的名称
 
 - IDA 调试so库
 
@@ -230,6 +243,7 @@
   14. IDA中F9继续运行
 
 
+
 - jdb
 
   ```bash
@@ -237,4 +251,11 @@
   jdb -connect com.sun.jdi.SocketAttach:port=8899,hostname=localhost
   ```
 
-- 监控LogTag为ActivityManage的Log能了解当前弹出的Activity的名称
+
+***
+
+### 抓包分析
+
+- tcpdump
+
+> tcpdump -p -vv -s 0 -w /sdcard/capture.cap

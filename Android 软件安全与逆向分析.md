@@ -217,8 +217,7 @@
     >```bash
   adb shell am start -D -n com.ali.encryption/com.ali.encryption.MainActivity
                    （前面是包名，后面是类名）
-  ```
-
+    ```
 
   10. 启动IDA，选择debugger->attach->remote armlinux/android debugger，hostname写localhost，port写23946，并且设置Debug option
   11. IDA选择进程

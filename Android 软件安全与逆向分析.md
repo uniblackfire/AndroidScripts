@@ -195,9 +195,10 @@
 
 ***
 ### 动态调试
-- IDA 调试so库
-	1. adb push android_server /data/local/tmp
 
+- IDA 调试so库
+
+	1. adb push android_server /data/local/tmp
 	2. adb shell
 	3. cd /data/local/tmp
 	4. su -
@@ -207,8 +208,8 @@
 	8. 设置端口转发
 
 		```bash
-adb forward tcp:23946 tcp:23946
-```
+		adb forward tcp:23946 tcp:23946
+		```
 
 	9. 启动app
 		>调试模式启动app
@@ -223,16 +224,16 @@ adb forward tcp:23946 tcp:23946
 	12. 在IDA中按G跳转到要调试的函数，F2下断点
 	13. 启动ADT，终端中执行
 
-		```bash
-	jdb -connect com.sun.jdi.SocketAttach:hostname=127.0.0.1,port=8700
+```bash
+jdb -connect com.sun.jdi.SocketAttach:hostname=127.0.0.1,port=8700
 	```
 	14. IDA中F9继续运行
 
 - jdb
 
-	```bash
-	adb forward tcp:8899 jdwp:19806
-	jdb -connect com.sun.jdi.SocketAttach:port=8899,hostname=localhost
-	```
+```bash
+adb forward tcp:8899 jdwp:19806
+jdb -connect com.sun.jdi.SocketAttach:port=8899,hostname=localhost
+```
 	
 - 监控LogTag为ActivityManage的Log能了解当前弹出的Activity的名称

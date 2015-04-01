@@ -221,13 +221,14 @@
   10. 启动IDA，选择debugger->attach->remote armlinux/android debugger，hostname写localhost，port写23946，并且设置Debug option
   11. IDA选择进程
   12. 在IDA中按G跳转到要调试的函数，F2下断点
-  13. 启动ADT，终端中执行
+  13. 命令行启动 monitor，终端中执行
 
     ```bash
     jdb -connect com.sun.jdi.SocketAttach:hostname=127.0.0.1,port=8700
       ```
 
   14. IDA中F9继续运行
+
 
 - jdb
 

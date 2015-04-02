@@ -206,6 +206,14 @@
 
 > Landroid/content/pm/PackageInfo;->signatures
 
+#### Drozer 使用方法
+
+1. 端口转发 `adb forward tcp:31415 tcp:31415`  
+2. 连接 `drozer.bat console connect`  
+3. 检测攻击面 `run app.package.attacksurface cmb.pb`  
+4. 数据库注入 `run scanner.provider.injection -a cmb.pb`  
+5. 可导出 Activity `run app.activity.info -a cmb.pb`
+
 
 ***
 ### 动态调试

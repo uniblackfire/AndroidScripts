@@ -196,12 +196,15 @@
 
 - 密码键盘
 
-> android/widget/Button;->getText()Ljava/lang/CharSequence;
+> Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
 
 - Log 特征
 
 > Landroid/util/Log;->
 
+- 签名验证
+
+> Landroid/content/pm/PackageInfo;->signatures
 
 
 ***

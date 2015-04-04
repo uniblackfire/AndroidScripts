@@ -257,10 +257,9 @@
 
 - jdb
 
-  ```bash
-  adb forward tcp:8899 jdwp:19806
-  jdb -connect com.sun.jdi.SocketAttach:port=8899,hostname=localhost
-  ```
+	1. adb shell am start -D -n `packagename`/`launchable-activity`
+	2. adb forward tcp:8600 jdwp:`pid`
+	3. jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=`monitor左边的端口`
 
 
 ***

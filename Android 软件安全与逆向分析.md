@@ -252,9 +252,8 @@
 12. 在IDA中按G跳转到要调试的函数，F2下断点
 13. 命令行启动 monitor，终端中执行
 
-	```bash
-	jdb -connect com.sun.jdi.SocketAttach:hostname=127.0.0.1,port=`monitor左边的端口`
-	  ```
+	> jdb -connect com.sun.jdi.SocketAttach:hostname=127.0.0.1,port=`monitor左边的端口`
+
 
 14. IDA中F9继续运行
 

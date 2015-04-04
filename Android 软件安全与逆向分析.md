@@ -220,6 +220,12 @@
 
 - 监控LogTag为ActivityManage的Log能了解当前弹出的Activity的名称
 
+- jdb
+
+	1. adb shell am start -D -n `packagename`/`launchable-activity`
+	2. adb forward tcp:8600 jdwp:`pid`
+	3. jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=`monitor左边的端口`
+
 - IDA 调试so库
 
   1. adb push android_server /data/local/tmp
@@ -253,13 +259,6 @@
 
   14. IDA中F9继续运行
 
-
-
-- jdb
-
-	1. adb shell am start -D -n `packagename`/`launchable-activity`
-	2. adb forward tcp:8600 jdwp:`pid`
-	3. jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=`monitor左边的端口`
 
 
 ***

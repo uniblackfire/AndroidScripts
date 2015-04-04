@@ -237,16 +237,15 @@
 7. 另外开启一个控制台
 8. 设置端口转发
 
-```bash
-adb forward tcp:23946 tcp:23946
-```
+	```bash
+	adb forward tcp:23946 tcp:23946
+	```
 
 9. 调试模式启动app
 
-```bash
-adb shell am start -D -n com.ali.encryption/com.ali.encryption.MainActivity
-			   （前面是包名，后面是类名）
-```
+	```bash
+	adb shell am start -D -n `packagename`/`launchable-activity`
+	```
 
 10. 启动IDA，选择debugger->attach->remote armlinux/android debugger，hostname写localhost，port写23946，并且设置Debug option
 11. IDA选择进程

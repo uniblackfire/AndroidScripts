@@ -208,15 +208,17 @@
 
 - 防止截屏
 
-> invoke-virtual {p0}, Lcom/csii/ui/BaseActivity;->getWindow()Landroid/view/Window;
+```smali
+invoke-virtual {p0}, Lcom/csii/ui/BaseActivity;->getWindow()Landroid/view/Window;
 
-> move-result-object v0
+move-result-object v0
 
-> #v0=(Reference,Landroid/view/Window;);
-> const/16 v1, 0x2000
+#v0=(Reference,Landroid/view/Window;);
+const/16 v1, 0x2000
 
-> #v1=(PosShort);
-> invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
+#v1=(PosShort);
+invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
+```
 
 #### Drozer 使用方法
 

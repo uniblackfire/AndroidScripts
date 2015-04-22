@@ -54,10 +54,10 @@
     ```smali
     invoke-static {v11}, Lcrack/SmaliInject;->writeStrToFile(Ljava/lang/String;)V
     ```
-  7. 输出Object：
+  7. 输出Object 名称：
 
     ```smali
-    invoke-static {v8}, Lcrack/SmaliInject;->logObject(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcrack/SmaliInject;->logClassName(Ljava/lang/Object;)V
     ```
   8. 输出方法调用（v11的值代表需要输出多少层函数）：
 
@@ -116,13 +116,14 @@
   18. 获取TextView信息：
   
     ```smali
-    invoke-static {v0}, Lcrack/SmaliInject;->logTextView()V
+    invoke-static {v0}, Lcrack/SmaliInject;->logTextView(Landroid/widget/TextView;)V
     ```
   19. 获取EditText信息：
   
     ```smali
-    invoke-static {v0}, Lcrack/SmaliInject;->logEditText()V
+    invoke-static {v0}, Lcrack/SmaliInject;->logEditText(Landroid/widget/EditText;)V
     ```
+
 - 栈跟踪注入代码
 
   ```smali

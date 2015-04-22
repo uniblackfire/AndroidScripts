@@ -113,7 +113,16 @@
     ```smali
     invoke-static {}, Lcrack/SmaliInject;->methodFlag()V
     ```
-
+  18. 获取TextView信息：
+  
+    ```smali
+    invoke-static {v0}, Lcrack/SmaliInject;->logTextView()V
+    ```
+  19. 获取EditText信息：
+  
+    ```smali
+    invoke-static {v0}, Lcrack/SmaliInject;->logEditText()V
+    ```
 - 栈跟踪注入代码
 
   ```smali

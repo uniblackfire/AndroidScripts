@@ -250,6 +250,12 @@ invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
 - 监控LogTag为ActivityManage的Log能了解当前弹出的Activity的名称
 
+- 反调试经验
+
+> 查找ptrace()的调用情况
+
+> 查找getpid()函数，可能跟检测进程的`/proc/pid/status`里的`TracerPid`有关
+
 - jdb
 
 1. adb shell am start -D -n `packagename`/`launchable-activity`
